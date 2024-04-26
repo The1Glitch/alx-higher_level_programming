@@ -2,11 +2,11 @@
 """
 Script that fetches https://alx-intranet.hbtn.io/status
 """
-import request
+import requests
 
 if __name__ == '__main__':
     url = "https://alx-intranet.hbtn.io/status"
-    r = request.get(url)
+    r = requests.get(url)
     text = r.text
     print("Body response:")
     print("\t- type: {}".format(type(text)))
