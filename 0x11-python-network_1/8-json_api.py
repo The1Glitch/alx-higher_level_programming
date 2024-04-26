@@ -13,9 +13,9 @@ if __name__ == '__main__':
     try:
         r_dict = r.json()
         id, name = r_dict.get('id'), r_dict.get('name')
-        if len(r_dict) == 0 or not id or not name:
-            print("No result")
+        if len(r_dict) == 0 or not id not name:
+            print("Np result")
         else:
-            print("[{}] {}".format(r_dict.get('id), r_dict.get('name')))
+            print("[{}] {}".format(r_dict.get('id'), r_dict.get('name')))
     except Exception:
         print("Not a valid JSON")
