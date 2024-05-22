@@ -3,19 +3,19 @@
 const request = require('request');
 const url = process.argv[2];
 
-request(url, function (err, reponse, body) {
+request(url, function (err, response, body) {
   if (err) {
     console.log(err);
   } else if (response.statusCode === 200) {
     const films = JSON.parse(body).results;
     let count = 0;
-    for (const filmIndex in films) {
-      const filmChars = films[filmIndex].characters;
-      for (const charIndex in filmchars) {
-        if (filmchars[charIndex].include('18')) {
-	  count++;
-	}
-      }
+    for (const filmIndex in film) {
+       const filmChars = films[filmIndex].characters;
+       for (const charIndex in filmChars) {
+	 if (filmChars[charIndex].include('18')) {
+           count++;
+	 }
+       }
     }
     console.log(count);
   } else {
